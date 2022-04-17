@@ -132,8 +132,6 @@ const getUser = ({ params }, res) => {
 
 //Development purposes only
 const addDummyUsers = ({ body }, res) => {
-    console.log(body);
-
     Users.insertMany(body, (err, users) => {
         if (err) {
             return res.json({ error: err });
